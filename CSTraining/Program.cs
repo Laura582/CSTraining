@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Chose operation: + - * /");
+﻿Console.WriteLine("Choose operation: + - * /");
 string chosenOperator = Console.ReadLine();
 Console.WriteLine("Enter first number");
 int number1 = Convert.ToInt32(Console.ReadLine());
