@@ -1,41 +1,37 @@
-﻿namespace CSTraining
+﻿using CSTraining;
+
+string chosenValue = "";
+
+List<float> numbers = new List<float>();
+List<string> operators = new List<string>();
+//Enter values and Operators like this:
+//1
+//+
+//1
+//=
+Console.WriteLine("Calculator");
+Console.WriteLine("To calculate result, enter =");
+
+
+while (chosenValue != "=")
 {
-    class Program
+    chosenValue = Console.ReadLine();
+
+
+    if (float.TryParse(chosenValue, out var number))
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Choose operation: + - * /");
-            string chosenOperator = Console.ReadLine();
-            if (chosenOperator == "+"
-                   || chosenOperator == "-"
-                   || chosenOperator == "*"
-                   || chosenOperator == "/")
-            {
-                Console.WriteLine("Enter first number");
-                int number1 = Convert.ToInt32(Console.ReadLine());
+        numbers.Add(number);
+    }
+    else
+    {
+        Operator isOperator = new Operator(chosenValue);
 
-                Console.WriteLine("Enter second number");
-                int number2 = Convert.ToInt32(Console.ReadLine());
+        if (isOperator.GetIsOperator() == true)
+            operators.Add(chosenValue);
 
-                string result = Calculator(number1, number2, chosenOperator);
-                Console.WriteLine("Answer is " + result);
-            }
-            else
-            {
-                Console.WriteLine("WTF. Try again");
-            }
-
-        }
-        public static string Calculator (int number1, int number2, string chosenOperator)
-        {
-            return chosenOperator switch
-            {
-                "+" => Convert.ToString(number1 + number2),
-                "-" => Convert.ToString(number1 - number2),
-                "*" => Convert.ToString(number1 * number2),
-                "/" => Convert.ToString(number1 / number2),
-                _ => "WTF. Try again",
-            };
-        }
+        else
+            break;
     }
 }
+
+Console.WriteLine(Calculation.ResultCalculation(numbers.Count, numbers, operators));
