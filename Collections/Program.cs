@@ -18,7 +18,8 @@ foreach (string word in words)
     wordCounts[charArr[0]]++;
 }
 
-foreach (char letter in wordCounts.Keys)
+
+foreach (KeyValuePair<char,int> item in wordCounts.OrderBy(x => x.Key))
 {
-    Console.WriteLine($"{letter}: {wordCounts[letter]}");
+    Console.WriteLine($"{item.Key}: {item.Value}");
 }
