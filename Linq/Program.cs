@@ -7,8 +7,9 @@ string[] words;
 if (sentence != null)
 { 
     words = sentence.Split(' ');
-    var stringList = new List<string>(words);
-    var numbers = stringList
+
+    var numbers = words
+    .Select(x => x).ToList()
     .Where(x => int.TryParse(x, out int n) == true)
     .Select(x => int.Parse(x))
     .Select(x => Math.Pow(x, 2))
