@@ -9,11 +9,10 @@ if (sentence != null)
     words = sentence.Split(' ');
 
     var numbers = words
-    .Select(x => x).ToList()
-    .Where(x => int.TryParse(x, out int n) == true)
-    .Select(x => int.Parse(x))
-    .Select(x => Math.Pow(x, 2))
-    .OrderByDescending(x => x);
+        .Where(x => int.TryParse(x, out int n))
+        .Select(x => Math.Pow(int.Parse(x), 2))
+        .OrderByDescending(x => x);
+
     PrintCollection(numbers);
 }
 else
