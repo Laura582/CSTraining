@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTraining", "CSTraining\CSTraining.csproj", "{52992B53-B736-46FE-A4C6-6F9E337C8637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "CSTraining\Calculator.csproj", "{52992B53-B736-46FE-A4C6-6F9E337C8637}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{01964079-4488-40BE-9496-404469CC6B9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{E4560EA1-4D75-46B2-8E96-0C425E588E24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq", "Linq\Linq.csproj", "{E4560EA1-4D75-46B2-8E96-0C425E588E24}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0178C2A-BE09-4925-9C2D-0CF0A957DFAF} = {B0178C2A-BE09-4925-9C2D-0CF0A957DFAF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqLibrary", "LinqLibrary\LinqLibrary.csproj", "{B0178C2A-BE09-4925-9C2D-0CF0A957DFAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +32,10 @@ Global
 		{E4560EA1-4D75-46B2-8E96-0C425E588E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4560EA1-4D75-46B2-8E96-0C425E588E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4560EA1-4D75-46B2-8E96-0C425E588E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0178C2A-BE09-4925-9C2D-0CF0A957DFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0178C2A-BE09-4925-9C2D-0CF0A957DFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0178C2A-BE09-4925-9C2D-0CF0A957DFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0178C2A-BE09-4925-9C2D-0CF0A957DFAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
